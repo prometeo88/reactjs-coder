@@ -1,8 +1,11 @@
-
 const CardWidget = () => {
   return (
-    <div>(0)</div>
-  )
-}
+    <>
+      <div>
+        <span className="textoFlotante">0</span>
+      </div>
+    </>
+  );
+};
 
-export default CardWidget
+export default CardWidget;

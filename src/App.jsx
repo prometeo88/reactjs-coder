@@ -1,12 +1,14 @@
 import "./styles/components.css";
 import NavBar from "./components/NavBar";
+import { Box } from '@chakra-ui/react'
 
 function App() {
   return (
-    <div>
+    <Box>
+    <div className="Navbar">
       <h1>Santiago Automotores</h1>
       <NavBar/>
-    </div>
+    </div></Box>
 
   );
 }
