@@ -1,6 +1,7 @@
 import "./styles/components.css";
 import NavBar from "./components/NavBar";
 import { Box } from '@chakra-ui/react'
+import data from "./data.json"
 
 function App() {
   return (
@@ -12,5 +13,7 @@ function App() {
 
   );
 }
+
+console.log(data)
 
 export default App;

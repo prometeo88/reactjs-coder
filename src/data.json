@@ -1,0 +1,123 @@
+[
+    {
+      "id": "car1",
+      "producto": "TOYOTA HILUX 2.8 4X2 DC SRV",
+      "descripcion": "Camioneta versátil y resistente, ideal para cualquier terreno.",
+      "stock": 2
+    },
+    {
+      "id": "car2",
+      "producto": "FORD MUSTANG GT",
+      "descripcion": "Potente deportivo con estilo audaz y rendimiento excepcional.",
+      "stock": 7
+    },
+    {
+      "id": "car3",
+      "producto": "CHEVROLET CAMARO SS",
+      "descripcion": "Deportivo llamativo y emocionante, diseñado para destacar.",
+      "stock": 4
+    },
+    {
+      "id": "car4",
+      "producto": "BMW M5",
+      "descripcion": "Lujo y rendimiento combinados en un sedán de alto nivel.",
+      "stock": 3
+    },
+    {
+      "id": "car5",
+      "producto": "HONDA ACCORD EX-L",
+      "descripcion": "Elegancia y comodidad en un sedán confiable y sofisticado.",
+      "stock": 9
+    },
+    {
+      "id": "car6",
+      "producto": "MERCEDES-BENZ C200",
+      "descripcion": "Sedán de lujo con estilo, rendimiento y tecnología avanzada.",
+      "stock": 7
+    },
+    {
+      "id": "car7",
+      "producto": "VOLKSWAGEN GOLF GTI",
+      "descripcion": "Hatchback compacto con diseño deportivo y emocionante.",
+      "stock": 6
+    },
+    {
+      "id": "car8",
+      "producto": "TESLA MODEL 3 PERFORMANCE",
+      "descripcion": "Automóvil eléctrico de alto rendimiento con tecnología innovadora.",
+      "stock": 9
+    },
+    {
+      "id": "car9",
+      "producto": "AUDI Q7 3.0 TDI",
+      "descripcion": "SUV de lujo que ofrece comodidad, refinamiento y capacidad.",
+      "stock": 8
+    },
+    {
+      "id": "car10",
+      "producto": "SUBARU WRX STI",
+      "descripcion": "Emoción y tracción en las cuatro ruedas en un automóvil compacto.",
+      "stock": 8
+    },
+    {
+      "id": "car11",
+      "producto": "HYUNDAI SANTA FE LIMITED",
+      "descripcion": "SUV elegante con amplio espacio interior y características premium.",
+      "stock": 10
+    },
+    {
+      "id": "car12",
+      "producto": "JEEP GRAND CHEROKEE LIMITED",
+      "descripcion": "Todoterreno de lujo con estilo imponente y desempeño excepcional.",
+      "stock": 3
+    },
+    {
+      "id": "car13",
+      "producto": "NISSAN GT-R",
+      "descripcion": "Deportivo legendario que ofrece velocidad y prestigio en cada curva.",
+      "stock": 2
+    },
+    {
+      "id": "car14",
+      "producto": "MAZDA MX-5 MIATA",
+      "descripcion": "Descapotable deportivo que brinda diversión al aire libre y estilo inigualable.",
+      "stock": 8
+    },
+    {
+      "id": "car15",
+      "producto": "KIA OPTIMA SX",
+      "descripcion": "Sedán potente con estilo atractivo, rendimiento ágil y tecnología avanzada.",
+      "stock": 3
+    },
+    {
+      "id": "car16",
+      "producto": "PORSCHE CAYMAN GTS",
+      "descripcion": "Coupé exclusivo con deportividad incomparable y diseño cautivador.",
+      "stock": 3
+    },
+    {
+      "id": "car17",
+      "producto": "LAND ROVER DISCOVERY SPORT HSE",
+      "descripcion": "SUV de lujo con capacidad todo terreno, comodidad y refinamiento.",
+      "stock": 10
+    },
+    {
+      "id": "car18",
+      "producto": "FIAT 500 ABARTH",
+      "descripcion": "Automóvil compacto con estilo retro y carácter divertido para la ciudad.",
+      "stock": 9
+    },
+    {
+      "id": "car19",
+      "producto": "LEXUS IS 350 F SPORT",
+      "descripcion": "Sedán de lujo con rendimiento deportivo y elegancia refinada.",
+      "stock": 6
+    },
+    {
+      "id": "car20",
+      "producto": "MINI COOPER S",
+      "descripcion": "Icono compacto que combina diseño clásico con diversión al volante.",
+      "stock": 10
+    }
+  ]
+  
