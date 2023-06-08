@@ -24,3 +24,8 @@ body{
   line-height: 45px;
   color:rgba(201, 42, 37, 0.879);
 }
+
+.titulos{
+  font-size: 35px;
+  color: cadetblue;
+}
