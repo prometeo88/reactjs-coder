@@ -1,21 +1,26 @@
 import CardWidget from "./CardWidget";
-import ItemListContainer from "./ItemListContainer";
 
 const NavBar = () => {
   return (
-    <div>
-      <ul>
-        <li>Inicio</li>
-        <li>Vehiculos por Categoria</li>
-        <li>Autos</li>
-      </ul>
-      <div>
-        <>
+    <>
+      <div className="Navbar">
+        <div>
+          <h1>Santiago Automotores</h1>
+        </div>
+
+        <div>
+          <ul>
+            <li>Vehiculos por Categoria</li>
+            <li>Autos</li>
+          </ul>
+        </div>
+
+        <div>
           <CardWidget />
-          <ItemListContainer />
-        </>
+        </div>
+        
       </div>
-    </div>
+    </>
   );
 };
 

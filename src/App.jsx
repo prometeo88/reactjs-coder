@@ -1,29 +1,29 @@
 import "./styles/components.css";
 import NavBar from "./components/NavBar";
+import Welcome from "./components/Welcome";
 import { Box } from "@chakra-ui/react";
-import Catalogo from "./components/Catalogo"
-import ItemDetail from "./components/ItemDetail"
+import ItemDetail from "./components/ItemDetail";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
     <>
-      <Box>
-        <div className="Navbar">
-          <h1>Santiago Automotores</h1>
+      <BrowserRouter>
+        <Box>
           <NavBar />
+        </Box>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<Welcome />} />
+            <Route exact path="/categoria" element={<ItemListContainer />} />
+            <Route exact path="/categoria" element={<ItemDetail />} />
+          </Routes>
         </div>
-      </Box>
-      <div>
-        <Catalogo />
-        <ItemDetail />
-      </div>
-      <Box>
-        
-      </Box>
+        <Box></Box>
+      </BrowserRouter>
     </>
   );
 }
-
-
 
 export default App;

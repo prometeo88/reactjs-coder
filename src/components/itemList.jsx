@@ -1,6 +1,12 @@
+import { Container } from "@chakra-ui/react";
+import data from "../data.json";
+import Item from "./Item";
+
 const itemList = () => {
     return (
-        <div>Itemlist</div>
+        <Container>
+        <Item></Item>
+          </Container>
           );
   };
   
