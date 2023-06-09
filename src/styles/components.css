@@ -29,3 +29,9 @@ body{
   font-size: 35px;
   color: cadetblue;
 }
+
+.carimg{
+
+  max-width: 250px;
+  max-height: 250px;
+}
