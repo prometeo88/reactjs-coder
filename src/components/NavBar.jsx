@@ -1,24 +1,25 @@
+import { Link } from "react-router-dom";
 import CardWidget from "./CardWidget";
 
 const NavBar = () => {
   return (
     <>
       <div className="Navbar">
-        <div>
-          <h1>Santiago Automotores</h1>
+        <div> {/* BUSCAR COMO QUITAR EL SUBRAYADO */}
+          <Link to={"/"}><h1 style={{textDecoration: 'none'}}>Santiago Automotores</h1></Link>
         </div>
 
         <div>
           <ul>
-            <li>Vehiculos por Categoria</li>
-            <li>Autos</li>
+            <Link to={"/categoria"}><li>Vehiculos por Categoria</li></Link>
+            
           </ul>
         </div>
 
         <div>
           <CardWidget />
         </div>
-        
+
       </div>
     </>
   );
