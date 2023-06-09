@@ -1,16 +1,26 @@
 import data from "../data.json"
 
- console.log(data)
-const itemDetail = ({data}) => {
-    //const dataFiltro = data.filter((data) => data.id == id)
-    return(
+ 
+const ItemDetail = () => {
 
-data.map((prod)=>(
-        <div key={data.id}>
-<h5>hola</h5>
-        </div>
-    ) )
-    
+    return (
+        <>
+        <div><h1 className="titulos" >Listado de Productos Disponibles</h1></div>
+          {data.map((prod) => {
+            return (
+              <div key={prod.id}>
+                <h3>{prod.producto}</h3>
+                <h5>Descrición: {prod.descripcionLarga}</h5>
+                <h5>Stock: {prod.stock}</h5>
+              </div>
+            );
+          })}
+        </>
+      );
+    };
 
 
-    )}
+
+
+    export default ItemDetail
+  

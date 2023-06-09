@@ -15,7 +15,7 @@ function App() {
       </Box>
       <div>
         <Catalogo />
-        <itemDetail /> 
+        <ItemDetail />
       </div>
       <Box>
         
