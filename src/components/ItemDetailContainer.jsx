@@ -1,8 +1,9 @@
 import data from "../data.json";
-import ItemList from "./ItemList";
+import itemDetail from "./ItemDetail";
 
-const ItemListContainer = () => {
-  //async
+const itemDetailContainer = () => {
+  
+    //async
 const getData = () => {
   return new Promise((resolve, reject) => {
     if (data.length === 0) {
@@ -25,10 +26,10 @@ async function fetchingData() {
 
 fetchingData();
   return (
-    <div>ItemListContainer</div>
+    <div>ItemDetail</div>
   )
 }
 
 
 
-export default ItemListContainer
+export default itemDetailContainer

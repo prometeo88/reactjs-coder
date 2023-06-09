@@ -8,7 +8,6 @@ const NavBar = () => {
         <li>Inicio</li>
         <li>Vehiculos por Categoria</li>
         <li>Autos</li>
-        <li>Motos</li>
       </ul>
       <div>
         <>

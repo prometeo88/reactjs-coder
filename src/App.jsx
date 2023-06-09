@@ -2,6 +2,7 @@ import "./styles/components.css";
 import NavBar from "./components/NavBar";
 import { Box } from "@chakra-ui/react";
 import Catalogo from "./components/Catalogo"
+import ItemDetail from "./components/ItemDetail"
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       </Box>
       <div>
         <Catalogo />
-        
+        <itemDetail /> 
       </div>
       <Box>
         
