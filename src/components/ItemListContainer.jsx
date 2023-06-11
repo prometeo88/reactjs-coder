@@ -28,14 +28,14 @@ fetchingData();
 
 
  return (
-    <>
+   
     <div className="catalogo">
       <div >
         <h1 className="titulos">Catalogo</h1>
       </div>
-      <ItemList> </ItemList>
-      </div>
-    </>
+      <ItemList></ItemList>
+      </div> 
+    
   );
 };
 

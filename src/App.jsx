@@ -1,7 +1,7 @@
 import "./styles/components.css";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/Welcome";
-import { Box, CardFooter } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import ItemDetail from "./components/ItemDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer";
