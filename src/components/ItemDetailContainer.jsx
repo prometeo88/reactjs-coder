@@ -1,8 +1,10 @@
 import data from "../data.json";
-import itemDetail from "./ItemDetail";
+import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const itemDetailContainer = () => {
-  
+  const {id} = useParams();
+
     //async
 const getData = () => {
   return new Promise((resolve, reject) => {
@@ -26,7 +28,7 @@ async function fetchingData() {
 
 fetchingData();
   return (
-    <div>ItemDetail</div>
+    <ItemDetail/>
   )
 }
 

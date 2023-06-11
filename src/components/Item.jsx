@@ -1,5 +1,6 @@
 import { Card, CardBody, Center } from "@chakra-ui/react";
 import data from "../data.json";
+import { Link } from "react-router-dom";
 
 const Item = () => {
   return (
@@ -22,7 +23,9 @@ const Item = () => {
                 <p>Stock: {stock}</p>
                 <p>Precio: {precio}</p>
 
+                <Link to= {`/item/${id}`}>
                 <button>Detalle</button>
+                </Link>
               </div>
             );
           })}
