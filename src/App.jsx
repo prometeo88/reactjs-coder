@@ -5,7 +5,7 @@ import { Box, CardFooter } from "@chakra-ui/react";
 import ItemDetail from "./components/ItemDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer";
-import itemDetailContainer from "./components/itemDetailContainer";
+import ItemDetailContainer from "./components/itemDetailContainer";
 import Cart from "./components/Cart"
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
             <Route exact path="/categoria" element={<ItemListContainer />} />
             <Route exact path="/categoria" element={<ItemDetail />} />
             <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/item/:id" element={<itemDetailContainer />}/>
+            <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
           </Routes>
         </div>
         <Box></Box>
