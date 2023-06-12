@@ -26,8 +26,9 @@ const ItemListContainer = () => {
 
   fetchingData();
 
-  const {categoria} = useParams();
+  const { categoria } = useParams();
   const categoriaFilter = data.filter((prod) => prod.categoria === categoria);
+  console.log(categoriaFilter)
 
   return (
     <div className="catalogo">
