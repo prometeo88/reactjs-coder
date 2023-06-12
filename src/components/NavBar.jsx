@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import CardWidget from "./CardWidget";
 
+
 const NavBar = () => {
+
+ 
+
   return (
     <>
       <div className="Navbar">
@@ -11,8 +15,19 @@ const NavBar = () => {
 
         <div>
           <ul>
-            <Link to={"/categoria"}><li>Vehiculos por Categoria</li></Link>
-            
+            <li>
+              <Link to={"/categoria"}>
+                Vehiculos por Categoria
+              </Link>
+              <ul>
+                <li>
+                  <Link to={`/categoria/${"autos"}`}>Autos</Link>
+                </li>
+                <li>
+                  <Link to={`/categoria/${"camionetas"}`}>Camionetas</Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -21,8 +36,12 @@ const NavBar = () => {
         </div>
 
       </div>
-    </>
-  );
+      </>
+
+
+);
+
+  
 };
 
 export default NavBar;

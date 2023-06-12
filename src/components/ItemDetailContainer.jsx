@@ -1,6 +1,6 @@
 import data from "../data.json";
-import ItemDetail from "./ItemDetail";
 import {useParams} from "react-router-dom";
+import ItemDetail from "./itemDetail";
 
 
 const ItemDetailContainer = () => {
@@ -30,7 +30,6 @@ const ItemDetailContainer = () => {
   fetchingData();
 
   const carFilter = data.filter((prod) => prod.id === id);
-  console.log(carFilter)
 
   return (
     <div>{id ? <ItemDetail prod={carFilter} /> : <ItemDetail car={data} />}</div>

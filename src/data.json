@@ -5,7 +5,8 @@
     "descripcion": "Camioneta versátil y resistente, ideal para cualquier terreno.",
     "stock": 2,
     "precio": 25000,
-    "descripcionLarga": "La TOYOTA HILUX 2.8 4X2 DC SRV es una camioneta confiable y robusta, diseñada para enfrentar cualquier desafío. Con su tracción 4x2, es ideal tanto para la ciudad como para terrenos más exigentes. Cuenta con características avanzadas y un interior cómodo y espacioso."
+    "descripcionLarga": "La TOYOTA HILUX 2.8 4X2 DC SRV es una camioneta confiable y robusta, diseñada para enfrentar cualquier desafío. Con su tracción 4x2, es ideal tanto para la ciudad como para terrenos más exigentes. Cuenta con características avanzadas y un interior cómodo y espacioso.",
+    "categoria": "camionetas"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "descripcion": "Potente deportivo con estilo audaz y rendimiento excepcional.",
     "stock": 7,
     "precio": 50000,
-    "descripcionLarga": "El FORD MUSTANG GT es un icónico deportivo que combina un diseño audaz con un rendimiento excepcional. Con su motor potente y su estilo inconfundible, te asegura una experiencia de conducción emocionante y llena de adrenalina."
+    "descripcionLarga": "El FORD MUSTANG GT es un icónico deportivo que combina un diseño audaz con un rendimiento excepcional. Con su motor potente y su estilo inconfundible, te asegura una experiencia de conducción emocionante y llena de adrenalina.",
+    "categoria": "autos"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "descripcion": "Deportivo llamativo y emocionante, diseñado para destacar.",
     "stock": 4,
     "precio": 45000,
-    "descripcionLarga": "El CHEVROLET CAMARO SS es un deportivo icónico que no pasa desapercibido. Con su estilo llamativo y emocionante, este automóvil está diseñado para destacar en la carretera. Su potencia y rendimiento te brindarán una experiencia de conducción única."
+    "descripcionLarga": "El CHEVROLET CAMARO SS es un deportivo icónico que no pasa desapercibido. Con su estilo llamativo y emocionante, este automóvil está diseñado para destacar en la carretera. Su potencia y rendimiento te brindarán una experiencia de conducción única.",
+    "categoria": "autos"
   },
   {
     "id": "4",
@@ -29,7 +32,8 @@
     "descripcion": "Lujo y rendimiento combinados en un sedán de alto nivel.",
     "stock": 3,
     "precio": 60000,
-    "descripcionLarga": "El BMW M5 es un sedán de lujo que combina un diseño elegante con un rendimiento excepcional. Con su potente motor y su interior sofisticado, te ofrece una experiencia de conducción de alto nivel. Disfruta de comodidad, tecnología avanzada y prestaciones emocionantes en cada viaje."
+    "descripcionLarga": "El BMW M5 es un sedán de lujo que combina un diseño elegante con un rendimiento excepcional. Con su potente motor y su interior sofisticado, te ofrece una experiencia de conducción de alto nivel. Disfruta de comodidad, tecnología avanzada y prestaciones emocionantes en cada viaje.",
+    "categoria": "autos"
   },
   {
     "id": "5",
@@ -37,6 +41,7 @@
     "descripcion": "Elegancia y comodidad en un sedán confiable y sofisticado.",
     "stock": 9,
     "precio": 35000,
-    "descripcionLarga": "El HONDA ACCORD EX-L es un sedán confiable y sofisticado que combina elegancia y comodidad. Con su diseño atractivo y su interior espacioso, te ofrece una experiencia de conducción placentera. Disfruta de su rendimiento suave, tecnología avanzada y calidad excepcional."
+    "descripcionLarga": "El HONDA ACCORD EX-L es un sedán confiable y sofisticado que combina elegancia y comodidad. Con su diseño atractivo y su interior espacioso, te ofrece una experiencia de conducción placentera. Disfruta de su rendimiento suave, tecnología avanzada y calidad excepcional.",
+    "categoria": "autos"
   }
 ]

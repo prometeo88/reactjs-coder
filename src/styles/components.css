@@ -16,6 +16,10 @@ body {
   
 }
 
+.Navbar a {
+  text-decoration: none;
+}
+
 
 .textoFlotante {
   display: block;
