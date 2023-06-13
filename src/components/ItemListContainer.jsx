@@ -31,7 +31,7 @@ const ItemListContainer = () => {
   console.log(categoriaFilter)
 
   return (
-    <div className="catalogo">
+    <div>
       <div>
         <h1 className="titulos">Catalogo por Categoria</h1>
       </div>

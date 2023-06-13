@@ -15,7 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Box>
-          <NavBar />
+          <NavBar/>
         </Box>
         <div>
           <Routes>

@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import { Container } from "@chakra-ui/react";
-import Item from "./Item";
+import Item from "./item";
+
 
 const ItemList = ({ prod }) => {
   return (
@@ -8,9 +10,10 @@ const ItemList = ({ prod }) => {
         <Item
           key={item.id}
           id={item.id}
-          prod={item.producto}
+          producto={item.producto}
           descripcion={item.descripcion}
           stock={item.stock}
+          precio={item.precio}
         />
       ))}
     </Container>

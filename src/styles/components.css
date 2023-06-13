@@ -10,9 +10,12 @@ body {
 .Navbar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  
   background-color: rgb(133, 201, 148);
   margin: auto;
+  height: 75px;
+  
   
 }
 
@@ -59,4 +62,7 @@ body {
 
 .catalogo {
   border: 3px solid black;
+  width: 800px;
+  padding:30px;
+  margin: 15px;
 }
