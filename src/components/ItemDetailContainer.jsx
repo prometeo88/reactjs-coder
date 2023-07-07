@@ -6,8 +6,7 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  console.log(id)
-
+  
   const [dataIndividual, setProds] = useState([null]);
 
    useEffect(() => {

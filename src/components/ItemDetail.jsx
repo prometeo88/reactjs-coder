@@ -14,7 +14,7 @@ import ItemCount from "./ItemCount";
 const ItemDetail = ({ prod }) => {
   const {  id, producto, descripcionLarga, stock, precio } = prod;
 
-  console.log(id)
+ 
 
   return (
     <>

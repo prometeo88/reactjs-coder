@@ -1,12 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../context/shoppingCartContext";
 import { Button, Card } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
 
-console.log(cart)
   const calculateSubtotal = (quantity, precio) => {
     return (quantity * precio).toLocaleString();
   };
@@ -26,6 +26,42 @@ console.log(cart)
     setCart([]);
   };
 
+  const Cart = () => {
+    const { cart, setCart } = useContext(CartContext);
+  };
+  const db = getFirestore();
+
+  const [orderID, setOrderID] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [confirmarEmail, setConfirmarEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addDoc(orderColletion, order).then(({ id }) => setOrderID(id));
+
+    if (!name || !email || !telefono) {
+      alert("Por favor, complete todos los campos");
+      return;
+    }
+
+    if (email !== confirmarEmail) {
+      alert("Los emails no coinciden");
+      return;
+    }
+  };
+
+  const order = {
+    name,
+    email,
+    confirmarEmail,
+    telefono,
+    cart,
+  };
+
+  const orderColletion = collection(db, "orden");
+
   return (
     <div>
       <h1>Carrito de Compra</h1>
@@ -38,7 +74,7 @@ console.log(cart)
         </div>
       ) : (
         <div>
-          <Card maxW="500px" p="4">
+          <Card maxW="250px" p="4">
             <ul>
               {cart.map((item) => (
                 <li key={item.id}>
@@ -46,9 +82,12 @@ console.log(cart)
                   <p>Cantidad: {item.quantity}</p>
                   <p>Precio: USD {item.precio.toLocaleString()}</p>
                   <p>
-                    Subtotal: USD {calculateSubtotal(item.quantity, item.precio)}
+                    Subtotal: USD{" "}
+                    {calculateSubtotal(item.quantity, item.precio)}
                   </p>
-                  <button onClick={() => eliminarItem(item.id)}>Eliminar</button>
+                  <button onClick={() => eliminarItem(item.id)}>
+                    Eliminar
+                  </button>
                 </li>
               ))}
             </ul>
@@ -63,7 +102,49 @@ console.log(cart)
           <p>Agregar elementos al carrito para finalizar su Compra</p>
         </div>
       ) : (
-        <form>{/* Agrega los campos del formulario de compra */}</form>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Nombre:</label>
+              <input
+                type="text"
+                name="Apellido y Nombre"
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label>Teléfono:</label>
+              <input
+                type="text"
+                name="telefono"
+                onChange={(e) => setTelefono(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>Confirmar Email:</label>
+              <input type="email" name="confirmarEmail"
+              onChange={(e) => setConfirmarEmail(e.target.value)}
+               />
+            </div>
+            <button type="submit">Confirmar Compra</button>
+          </form>
+          <p>Con su numero de Orden, su compra a finalizado.</p>
+          <p>Nro de orden: {orderID}</p>
+          <div>
+            <Link to={"/"}>
+              <Button onClick={vaciarCarrito}>Finalizar y Volver</Button>
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );
