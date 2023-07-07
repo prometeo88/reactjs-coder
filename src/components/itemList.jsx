@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import Item from "./item";
 
 
 const ItemList = ({ prod }) => {
   return (
-    <Container>
+    <Container className="cardCatalogo">
+      <Box className="cardIndividual">
       {prod.map((item) => (
         <Item
           key={item.id}
@@ -15,7 +16,7 @@ const ItemList = ({ prod }) => {
           stock={item.stock}
           precio={item.precio}
         />
-      ))}
+      ))}</Box>
     </Container>
   );
 };
