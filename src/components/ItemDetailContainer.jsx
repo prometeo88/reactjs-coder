@@ -1,6 +1,6 @@
 import data from "../data.json";
 import {useParams} from "react-router-dom";
-import ItemDetail from "./itemDetail";
+import ItemDetail from "./ItemDetail";
 
 
 const ItemDetailContainer = () => {

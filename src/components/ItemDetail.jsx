@@ -9,6 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ prod }) => {
   const { producto, descripcionLarga, stock, precio } = prod[0];
@@ -41,10 +42,16 @@ const ItemDetail = ({ prod }) => {
             <Text>Stock: {stock}</Text>
             <Text>Precio: USD {precio}</Text>
             <Text>Precio: ARG {(precio * 450).toLocaleString()}</Text>
+            <Center>
+            <ItemCount stock={stock} id={prod[0].id} precio={precio} producto={producto} /></Center>
             <Center><Link to={"/categoria"}>
               <Button>Volver</Button></Link>
             </Center>
           </Box>
+          <Box>
+          <Center><Link to={"/Cart"}>
+              <Button>Ver Carrito</Button></Link>
+            </Center> </Box>
         </Card>
       </Center>
     </>

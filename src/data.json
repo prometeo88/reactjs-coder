@@ -43,5 +43,14 @@
     "precio": 35000,
     "descripcionLarga": "El HONDA ACCORD EX-L es un sedán confiable y sofisticado que combina elegancia y comodidad. Con su diseño atractivo y su interior espacioso, te ofrece una experiencia de conducción placentera. Disfruta de su rendimiento suave, tecnología avanzada y calidad excepcional.",
     "categoria": "autos"
+  },
+  {
+    "id": "6",
+    "producto": "FORD RANGER XLT",
+    "descripcion": "Camioneta robusta y versátil para todo tipo de terrenos.",
+    "stock": 5,
+    "precio": 30000,
+    "descripcionLarga": "La FORD RANGER XLT es una camioneta robusta y versátil diseñada para enfrentar todo tipo de terrenos. Con su potente motor y su tracción confiable, es ideal tanto para aventuras off-road como para el uso diario. Cuenta con un interior espacioso y comodidades modernas.",
+    "categoria": "camionetas"
   }
 ]
