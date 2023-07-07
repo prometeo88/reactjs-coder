@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 
 const Item = ({ id, producto, descripcion, stock, precio, categoria }) => {
+  console.log(id)
   return (
     <Center>
       <Card className="catalogo">

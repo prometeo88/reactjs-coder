@@ -1,38 +1,32 @@
-import data from "../data.json";
 import {useParams} from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
+  console.log(id)
 
-  //async
-  const getData = () => {
-    return new Promise((resolve, reject) => {
-      if (data.length === 0) {
-        reject(new Error("No hay datos"));
+  const [dataIndividual, setProds] = useState([null]);
+
+   useEffect(() => {
+    const base= getFirestore ();
+    const prodsIndividual = doc(base,"vehiculos", `${id}`);
+    getDoc(prodsIndividual).then((snapshot) => {
+      if (snapshot.exists()){
+        setProds({id:snapshot.id,...snapshot.data()});
+      }else{
+        console.log("No existe ese producto")
       }
-      setTimeout(() => {
-        resolve(data);
-      }, 2000);
     });
-  };
+   },[id]);
 
-  async function fetchingData() {
-    try {
-      const datosFetched = await getData();
-      console.log(datosFetched);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  fetchingData();
-
-  const carFilter = data.filter((prod) => prod.id === id);
-
+ 
   return (
-    <div>{id ? <ItemDetail prod={carFilter} /> : <ItemDetail car={data} />}</div>
+    <div>
+    {id ? <ItemDetail prod={dataIndividual} id={id} /> : <ItemDetail car={dataIndividual} />}
+  </div>
   );
 };
 

@@ -10,7 +10,6 @@ import ShoppingCartContextProvider from "../src/context/ShoppingCartContext"
 
 
 
-
 function App() {
   return (
     <><ShoppingCartContextProvider>

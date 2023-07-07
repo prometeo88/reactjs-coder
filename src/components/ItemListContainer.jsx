@@ -1,34 +1,24 @@
-import data from "../data.json";
+import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import {  collection, getDocs, getFirestore} from "firebase/firestore"
 
 const ItemListContainer = () => {
-  //async
-  const getData = () => {
-    return new Promise((resolve, reject) => {
-      if (data.length === 0) {
-        reject(new Error("No hay datos"));
-      }
-      setTimeout(() => {
-        resolve(data);
-      }, 2000);
+   const { categoria } = useParams();
+   const [data, setProds] = useState([]);
+
+   useEffect(() => {
+    const base= getFirestore ();
+    const prodsCollection = collection(base,"vehiculos");
+    getDocs(prodsCollection).then((QuerySnapshot) => {
+const data = QuerySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id,}));
+setProds(data);
     });
-  };
-
-  async function fetchingData() {
-    try {
-      const datosFetched = await getData();
-      console.log(datosFetched);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  fetchingData();
-
-  const { categoria } = useParams();
-  const categoriaFilter = data.filter((prod) => prod.categoria === categoria);
-  console.log(categoriaFilter)
+   },[]);
+ 
+   
+   const categoriaFilter = data.filter((prod) => prod.categoria === categoria);
+  
 
   return (
     <div>

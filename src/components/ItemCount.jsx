@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useContext, useState } from "react";
-import { CartContext } from "../context/shoppingCartContext";
 import { Badge, ButtonGroup, IconButton, Tooltip } from "@chakra-ui/react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
+import { CartContext } from "../context/shoppingCartContext";
 
-const ItemCount = ({ stock, id, precio, producto }) => {
+const ItemCount = ({ stock , id, precio, producto }) => {
   const { cart, setCart } = useContext(CartContext);
 
   const [count, setCount] = useState(1);

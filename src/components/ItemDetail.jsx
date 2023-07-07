@@ -12,7 +12,9 @@ import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ prod }) => {
-  const { producto, descripcionLarga, stock, precio } = prod[0];
+  const {  id, producto, descripcionLarga, stock, precio } = prod;
+
+  console.log(id)
 
   return (
     <>
@@ -26,7 +28,7 @@ const ItemDetail = ({ prod }) => {
               </Heading>
             </Center>
           </Box>
-          <Box key={prod[0].id}>
+          <Box key={prod.id}>
             <Center>
               <Heading as="h3" size="lg">
                 {producto}
@@ -43,19 +45,32 @@ const ItemDetail = ({ prod }) => {
             <Text>Precio: USD {precio}</Text>
             <Text>Precio: ARG {(precio * 450).toLocaleString()}</Text>
             <Center>
-            <ItemCount stock={stock} id={prod[0].id} precio={precio} producto={producto} /></Center>
-            <Center><Link to={"/categoria"}>
-              <Button>Volver</Button></Link>
+              <ItemCount
+                stock={stock}
+                id={prod.id}
+                precio={precio}
+                producto={producto}
+              />
+            </Center>
+            <Center>
+              <Link to={"/categoria"}>
+                <Button>Volver</Button>
+              </Link>
             </Center>
           </Box>
           <Box>
-          <Center><Link to={"/Cart"}>
-              <Button>Ver Carrito</Button></Link>
-            </Center> </Box>
+            <Center>
+              <Link to={"/Cart"}>
+                <Button>Ver Carrito</Button>
+              </Link>
+            </Center>
+          </Box>
         </Card>
       </Center>
     </>
   );
+  
 };
+
 
 export default ItemDetail;
