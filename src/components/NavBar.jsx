@@ -27,6 +27,9 @@ const NavBar = () => {
               {menuOpen && (
                 <ul>
                   <li>
+                    <Link to={`/categoria/`}>Todos</Link>
+                  </li>
+                  <li>
                     <Link to={`/categoria/${"autos"}`}>Autos</Link>
                   </li>
                   <li>
