@@ -3,41 +3,47 @@ body {
   box-sizing: border-box;
   padding: 0;
   font-family: "Roboto", sans-serif;
-
-  
+  color: rgb(60, 60, 60);
 }
 
 .Navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
-  background-color: rgb(133, 201, 148);
-  margin: auto;
-  height: 75px;
-  
-  
+  background-color: #71AB7D;
+  margin: 0px;
+  height: 85px;
+  align-items: center;
+  position: sticky;
 }
 
 .Navbar a {
   text-decoration: none;
-  list-style: none
-
+  list-style: none;
+  color: rgb(60, 60, 60);
 }
 
+.NavbarLista ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 3px;
+  position: absolute;
+  margin: auto;
+}
 
 .textoFlotante {
   display: block;
   width: 50px;
-  height: 50px;
+  height: 46px;
   background-image: url(../assets/img/carrito-de-compras.png);
-  font-size: 15px;
+  font-size: 19px;
+  font-stretch:extra-expanded;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 45px;
   text-align: center;
   line-height: 45px;
-  color: rgba(201, 42, 37, 0.879);
+  color: rgba(135, 0, 0, 0.995);
 }
 
 .titulos {
@@ -65,16 +71,15 @@ body {
 .catalogo {
   border: 3px solid black;
   width: 800px;
-  padding:30px;
+  padding: 30px;
   margin: 15px;
-  
 }
 
-.cardCatalogo{
-  
-  flex-direction: row;
+.cardCatalogo {
+  display: flex;
+  flex-direction: column;
 }
-.cardIndividual{
+.cardIndividual {
   max-width: 380px;
   padding: 2px;
-  }
+}

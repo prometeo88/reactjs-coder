@@ -14,11 +14,11 @@ const NavBar = () => {
       <div className="Navbar">
         <div>
           <Link to={"/"}>
-            <h1 style={{ textDecoration: "none" }}>Santiago Automotores</h1>
+            <h1>Santiago Automotores</h1>
           </Link>
         </div>
 
-        <div>
+        <div className="NavbarLista">
           <ul>
             <li>
               <button onClick={handleMenuToggle}>
