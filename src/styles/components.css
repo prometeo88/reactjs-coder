@@ -12,9 +12,13 @@ body {
   justify-content: space-evenly;
   background-color: #71AB7D;
   margin: 0px;
+  padding: 15px;
   height: 85px;
   align-items: center;
   position: sticky;
+  top: 0;
+  z-index: 999;
+
 }
 
 .Navbar a {
@@ -46,6 +50,8 @@ body {
   color: rgba(135, 0, 0, 0.995);
 }
 
+
+
 .titulos {
   font-size: 35px;
   color: cadetblue;
@@ -73,12 +79,17 @@ body {
   width: 800px;
   padding: 30px;
   margin: 15px;
+ 
 }
 
 .cardCatalogo {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: row;
+  border: 3px solid #71AB7D;
 }
+
+
+
 .cardIndividual {
   max-width: 380px;
   padding: 2px;
