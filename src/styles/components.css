@@ -4,12 +4,26 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   color: rgb(60, 60, 60);
+  height: 100%;
+}
+
+.welcome-titulo{
+  text-align: center;
+  color: rgb(60, 60, 60);
+}
+
+.welcome-parrafo {
+  text-align: center;
+  color: rgb(60, 60, 60);
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 450;
 }
 
 .Navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content:space-around;
   background-color: #71AB7D;
   margin: 0px;
   padding: 15px;
@@ -24,7 +38,7 @@ body {
 .Navbar a {
   text-decoration: none;
   list-style: none;
-  color: rgb(60, 60, 60);
+  color: #286e6f !important;
 }
 
 .NavbarLista ul {
@@ -32,15 +46,22 @@ body {
   list-style: none;
   padding: 3px;
   position: absolute;
-  margin: auto;
+  margin-left: 5px;
+  font-size: 14px;
+  text-align: center;
+  
+}
+
+.NavbarLista ul li:hover{
+  background-color: rgba(184, 198, 198, 0.437);
 }
 
 .textoFlotante {
   display: block;
   width: 50px;
-  height: 46px;
+  height: 49px;
   background-image: url(../assets/img/carrito-de-compras.png);
-  font-size: 19px;
+  font-size: 17px;
   font-stretch:extra-expanded;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,6 +87,9 @@ body {
 .carimg {
   max-width: 250px;
   max-height: 250px;
+  border: 2px solid black;
+  border-radius: 7px;
+  
 }
 
 .welcome {
@@ -76,16 +100,25 @@ body {
 
 .catalogo {
   border: 3px solid black;
+  border-radius: 15px;
   width: 800px;
+  height: 450px;
   padding: 30px;
   margin: 15px;
- 
-}
+ }
 
+ .catalogo h2{
+  font-size: 1.1em;
+  align-items: center;
+  text-align: center;
+
+ }
 .cardCatalogo {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   border: 3px solid #71AB7D;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 

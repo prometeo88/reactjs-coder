@@ -10,8 +10,15 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, producto, descripcion, stock, precio, categoria }) => {
-  
+const Item = ({
+  id,
+  producto,
+  descripcion,
+  stock,
+  precio,
+  categoria,
+  imagen,
+}) => {
   return (
     <Center>
       <Card className="catalogo">
@@ -21,17 +28,16 @@ const Item = ({ id, producto, descripcion, stock, precio, categoria }) => {
           </Heading>
           <Text>{categoria}</Text>
           <Center>
-            <Image
-              className="carimg"
-              src="../src/assets/img/auto-generico.jpg"
-            />
+            <Image className="carimg" src={imagen}></Image>
           </Center>
           <Text>{descripcion}</Text>
           <Text>Stock: {stock}</Text>
           <Text>Precio: USD {precio}</Text>
           <Center>
             <Link to={`/item/${id}`}>
-              <Button colorScheme="blue">Ver Detalle</Button>
+              <Button colorScheme="blue" variant="outline">
+                Button
+              </Button>
             </Link>
           </Center>
         </Box>

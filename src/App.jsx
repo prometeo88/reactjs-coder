@@ -1,16 +1,20 @@
 import "./styles/components.css";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/Welcome";
-import { Box, flexbox } from "@chakra-ui/react";
+import { Box  } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer";
 import Cart from "./components/Cart";
 import ShoppingCartContextProvider from "../src/context/ShoppingCartContext";
+import { ChakraProvider } from '@chakra-ui/react'
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
     <>
+    <ChakraProvider>
       <ShoppingCartContextProvider>
         <BrowserRouter>
         <Box >
@@ -27,10 +31,11 @@ function App() {
               element={<ItemListContainer />}
             />
           </Routes>
-
+<Footer/>
           </Box>
         </BrowserRouter>
       </ShoppingCartContextProvider>
+      </ChakraProvider>
     </>
   );
 }

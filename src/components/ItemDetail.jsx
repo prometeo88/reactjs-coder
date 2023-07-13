@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ prod }) => {
-  const {  id, producto, descripcionLarga, stock, precio } = prod;
+  const {  id, producto, descripcionLarga, stock, precio,  } = prod;
 
  
 

@@ -14,6 +14,7 @@ const ItemList = ({ prod }) => {
             descripcion={item.descripcion}
             stock={item.stock}
             precio={item.precio}
+            imagen={item.imagen}
           />
         </Card>
       ))}
