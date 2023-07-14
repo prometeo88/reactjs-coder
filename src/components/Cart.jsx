@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../context/shoppingCartContext";
-import { Button, Card, FormControl, FormLabel, Input, VStack } from "@chakra-ui/react";
+import { Button, Card, FormControl, FormLabel, Input, VStack , Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
@@ -74,11 +74,11 @@ const Cart = () => {
         </div>
       ) : (
         <div className="carrito-productos">
-          <Card maxW="250px" p="4">
+          <Card className="carrito-card" justify="center" maxW="80%" p="4">
             <ul>
               {cart.map((item) => (
                 <li key={item.id}>
-                  <Card>
+                  <Flex>
                   <p>{item.producto}</p>
                   <p>Cantidad: {item.quantity}</p>
                   <p>Precio: USD {item.precio.toLocaleString()}</p>
@@ -86,25 +86,25 @@ const Cart = () => {
                     Subtotal: USD{" "}
                     {calculateSubtotal(item.quantity, item.precio)}
                   </p>
-                  <Button colorScheme="red" onClick={() => eliminarItem(item.id)}>
+                  <Button className="carrito-button" colorScheme="red" w="full" onClick={() => eliminarItem(item.id)}>
                     Eliminar
                   </Button>
-                  </Card>
+                  </Flex>
                 </li>
               ))}
             </ul>
           </Card>
-          <p>Total General: USD {calculateTotal()}</p>
+          <p className="carrito-total" >Total General: USD {calculateTotal()}</p>
           <Button colorScheme="blue" onClick={vaciarCarrito}>Vaciar Carrito</Button>
         </div>
       )}
-      <h2>Formulario de Compra</h2>
+      <h2 >Formulario de Compra</h2>
       {cart.length === 0 ? (
         <div>
           <p>Agregar elementos al carrito para finalizar su Compra</p>
         </div>
       ) : (
-        <div>
+        <div className="formulario-cart">
           <form onSubmit={handleSubmit}>
             <VStack spacing={4} alignItems="flex-start">
               <FormControl>
@@ -139,14 +139,14 @@ const Cart = () => {
                   onChange={(e) => setConfirmarEmail(e.target.value)}
                 />
               </FormControl>
-              <Button type="submit" colorScheme="green">Confirmar Compra</Button>
+              <Button className="formulario-button" type="submit" colorScheme="green">Confirmar Compra</Button>
             </VStack>
           </form>
           <p>Con su numero de Orden, su compra a finalizado.</p>
           <p>Nro de orden: {orderID}</p>
           <div>
             <Link to={"/"}>
-              <Button colorScheme="green" onClick={vaciarCarrito}>Finalizar y Volver</Button>
+              <Button className="formulario-button" colorScheme="green" onClick={vaciarCarrito}>Finalizar y Volver</Button>
             </Link>
           </div>
         </div>
