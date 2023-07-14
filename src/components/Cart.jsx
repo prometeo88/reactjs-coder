@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../context/shoppingCartContext";
-import { Button, Card } from "@chakra-ui/react";
+import { Button, Card, FormControl, FormLabel, Input, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
@@ -63,7 +63,7 @@ const Cart = () => {
   const orderColletion = collection(db, "orden");
 
   return (
-    <div>
+    <div className="carrito">
       <h1>Carrito de Compra</h1>
       {cart.length === 0 ? (
         <div>
@@ -73,11 +73,12 @@ const Cart = () => {
           </Link>
         </div>
       ) : (
-        <div>
+        <div className="carrito-productos">
           <Card maxW="250px" p="4">
             <ul>
               {cart.map((item) => (
                 <li key={item.id}>
+                  <Card>
                   <p>{item.producto}</p>
                   <p>Cantidad: {item.quantity}</p>
                   <p>Precio: USD {item.precio.toLocaleString()}</p>
@@ -85,15 +86,16 @@ const Cart = () => {
                     Subtotal: USD{" "}
                     {calculateSubtotal(item.quantity, item.precio)}
                   </p>
-                  <button onClick={() => eliminarItem(item.id)}>
+                  <Button colorScheme="red" onClick={() => eliminarItem(item.id)}>
                     Eliminar
-                  </button>
+                  </Button>
+                  </Card>
                 </li>
               ))}
             </ul>
           </Card>
           <p>Total General: USD {calculateTotal()}</p>
-          <button onClick={vaciarCarrito}>Vaciar Carrito</button>
+          <Button colorScheme="blue" onClick={vaciarCarrito}>Vaciar Carrito</Button>
         </div>
       )}
       <h2>Formulario de Compra</h2>
@@ -104,44 +106,47 @@ const Cart = () => {
       ) : (
         <div>
           <form onSubmit={handleSubmit}>
-            <div>
-              <label>Nombre:</label>
-              <input
-                type="text"
-                name="Apellido y Nombre"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-
-            <div>
-              <label>Teléfono:</label>
-              <input
-                type="text"
-                name="telefono"
-                onChange={(e) => setTelefono(e.target.value)}
-              />
-            </div>
-            <div>
-              <label>Email:</label>
-              <input
-                type="email"
-                name="email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label>Confirmar Email:</label>
-              <input type="email" name="confirmarEmail"
-              onChange={(e) => setConfirmarEmail(e.target.value)}
-               />
-            </div>
-            <button type="submit">Confirmar Compra</button>
+            <VStack spacing={4} alignItems="flex-start">
+              <FormControl>
+                <FormLabel>Nombre:</FormLabel>
+                <Input
+                  type="text"
+                  name="Apellido y Nombre"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Teléfono:</FormLabel>
+                <Input
+                  type="text"
+                  name="telefono"
+                  onChange={(e) => setTelefono(e.target.value)}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Email:</FormLabel>
+                <Input
+                  type="email"
+                  name="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Confirmar Email:</FormLabel>
+                <Input
+                  type="email"
+                  name="confirmarEmail"
+                  onChange={(e) => setConfirmarEmail(e.target.value)}
+                />
+              </FormControl>
+              <Button type="submit" colorScheme="green">Confirmar Compra</Button>
+            </VStack>
           </form>
           <p>Con su numero de Orden, su compra a finalizado.</p>
           <p>Nro de orden: {orderID}</p>
           <div>
             <Link to={"/"}>
-              <Button onClick={vaciarCarrito}>Finalizar y Volver</Button>
+              <Button colorScheme="green" onClick={vaciarCarrito}>Finalizar y Volver</Button>
             </Link>
           </div>
         </div>

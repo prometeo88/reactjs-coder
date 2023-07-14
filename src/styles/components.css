@@ -136,3 +136,26 @@ body {
   max-width: 380px;
   padding: 2px;
 }
+
+.carrito h1{
+  font-size: 35px;
+  text-align: center;
+  color: rgb(60, 60, 60);
+  padding: 15px;
+  border:3px solid black;
+}
+
+.carrito-productos{
+  max-width: 100%;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.carrito-productos p{
+  width: 80rem;
+  padding: 5px;
+  
+  
+}
