@@ -7,6 +7,12 @@ body {
   height: 100%;
 }
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
 .welcome-titulo{
   text-align: center;
   color: rgb(60, 60, 60);
@@ -75,48 +81,51 @@ body {
 
 .titulos {
   font-size: 35px;
-  color: cadetblue;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  color: rgb(60, 60, 60);
+  padding: 15px;
 }
 
 .detalles {
   margin: auto;
 }
 
-.carimg {
-  max-width: 250px;
-  max-height: 250px;
-  border: 2px solid black;
-  border-radius: 7px;
-  
-}
 
-.welcome {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-}
 
 .catalogo {
-  border: 3px solid black;
-  border-radius: 15px;
-  width: 800px;
-  height: 450px;
-  padding: 30px;
-  margin: 15px;
+  padding: 5px;
+  margin: 5px;
  }
 
  .catalogo h2{
   font-size: 1.1em;
   align-items: center;
   text-align: center;
+  padding: 10px;
 
  }
+
+ .catalogo p {
+  padding:6px;
+  margin-top: 5px;
+ }
+
+ .catalogo button{
+  margin: 15px;
+ }
+
+ .carimg {
+  max-width: 250px;
+  max-height: 170px;
+  border: 2px solid black;
+  border-radius: 7px;
+  
+}
+
+
 .cardCatalogo {
   display: flex;
   flex-direction: row;
-  border: 3px solid #71AB7D;
   flex-wrap: wrap;
   justify-content: center;
 }

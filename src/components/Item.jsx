@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
   Box,
   Card,
@@ -26,17 +27,17 @@ const Item = ({
           <Heading as="h2" size="lg">
             {producto}
           </Heading>
-          <Text>{categoria}</Text>
           <Center>
             <Image className="carimg" src={imagen}></Image>
           </Center>
+          <Text>Categoria: {categoria}</Text>
           <Text>{descripcion}</Text>
           <Text>Stock: {stock}</Text>
-          <Text>Precio: USD {precio}</Text>
+          <Text>Precio: USD {precio.toLocaleString()}</Text>
           <Center>
             <Link to={`/item/${id}`}>
-              <Button colorScheme="blue" variant="outline">
-                Button
+              <Button colorScheme="green" size="sm" rightIcon={<ArrowForwardIcon />} >
+                Ver Detalles
               </Button>
             </Link>
           </Center>

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useContext, useState } from "react";
-import { Badge, ButtonGroup, IconButton, Tooltip } from "@chakra-ui/react";
+import { Button, ButtonGroup, IconButton, Tooltip } from "@chakra-ui/react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 import { CartContext } from "../context/shoppingCartContext";
 
@@ -45,13 +45,13 @@ const ItemCount = ({ stock , id, precio, producto }) => {
       <ButtonGroup size="sm">
         {count < 1 ? (
           <Tooltip label="Mínimo de Stock Alcanzado" placement="bottom">
-            <IconButton icon={<MinusIcon />} isDisabled />
+            <IconButton  icon={<MinusIcon />} isDisabled />
           </Tooltip>
         ) : (
-          <IconButton icon={<MinusIcon />} onClick={substractQty} />
+          <IconButton colorScheme="green" icon={<MinusIcon />} onClick={substractQty} />
         )}
         <IconButton onClick={addToCart}>
-          <Badge > Agregar al Carrito: {count} </Badge>
+          <Button colorScheme="green" size="sm" > Agregar al Carrito: {count} </Button>
         </IconButton>
         {count >= stock && (
           <Tooltip label="No hay más stock disponible" placement="bottom">
@@ -59,7 +59,7 @@ const ItemCount = ({ stock , id, precio, producto }) => {
           </Tooltip>
         )}
         {count < stock && (
-          <IconButton icon={<AddIcon />} onClick={addQty} />
+          <IconButton colorScheme="green" icon={<AddIcon />} onClick={addQty} />
         )}
       </ButtonGroup>
     </>

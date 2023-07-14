@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { Heading } from "@chakra-ui/react";
 
 const ItemListContainer = () => {
   const { categoria } = useParams();
@@ -24,7 +25,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <div>
-        <h1 className="titulos">Catalogo por Categoria</h1>
+        <Heading as="h1" className="titulos">Catalogo</Heading>
       </div>
       <div>
         {categoria ? (

@@ -12,37 +12,33 @@ import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ prod }) => {
-  const {  id, producto, descripcionLarga, stock, precio,  } = prod;
+  const {  id, producto, descripcionLarga, stock, precio, imagen } = prod;
 
  
 
   return (
     <>
       <Center>
-        <Card maxW="400px" className="catalogo">
+        <Card maxW="600px" className="catalogo">
           <Box>
             {" "}
             <Center>
-              <Heading as="h1" size="xl" className="titulos">
-                Detalle del Vehiculo
+              <Heading as="h1" className="titulos">
+                {producto}
               </Heading>
             </Center>
           </Box>
           <Box key={prod.id}>
-            <Center>
-              <Heading as="h3" size="lg">
-                {producto}
-              </Heading>
-            </Center>
+            
             <Center>
               <Image
                 className="carimg"
-                src="../src/assets/img/auto-generico.jpg"
+                src={imagen}
               />
             </Center>
             <Text>{descripcionLarga}</Text>
             <Text>Stock: {stock}</Text>
-            <Text>Precio: USD {precio}</Text>
+            <Text>Precio: USD {(precio*1).toLocaleString()}</Text>
             <Text>Precio: ARG {(precio * 450).toLocaleString()}</Text>
             <Center>
               <ItemCount
@@ -54,14 +50,14 @@ const ItemDetail = ({ prod }) => {
             </Center>
             <Center>
               <Link to={"/categoria"}>
-                <Button>Volver</Button>
+                <Button colorScheme="green" size="sm">Volver</Button>
               </Link>
             </Center>
           </Box>
           <Box>
             <Center>
               <Link to={"/Cart"}>
-                <Button>Ver Carrito</Button>
+                <Button colorScheme="green" size="sm">Ver Carrito</Button>
               </Link>
             </Center>
           </Box>
