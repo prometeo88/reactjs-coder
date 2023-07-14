@@ -7,13 +7,23 @@ body {
   height: 100%;
 }
 
+.background {
+  background-color: #bccec3;
+ 
+}
+
 .welcome {
   display: flex;
   justify-content: center;
   padding: 40px;
 }
 
-.welcome-titulo{
+.welcome img{
+  border-radius: 450px;
+  border: 1px solid black;
+}
+
+.welcome-titulo {
   text-align: center;
   color: rgb(60, 60, 60);
 }
@@ -29,8 +39,8 @@ body {
 .Navbar {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  background-color: #71AB7D;
+  justify-content: space-around;
+  background-color: #71ab7d;
   margin: 0px;
   padding: 15px;
   height: 85px;
@@ -38,7 +48,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-
 }
 
 .Navbar a {
@@ -55,10 +64,9 @@ body {
   margin-left: 5px;
   font-size: 14px;
   text-align: center;
-  
 }
 
-.NavbarLista ul li:hover{
+.NavbarLista ul li:hover {
   background-color: rgba(184, 198, 198, 0.437);
 }
 
@@ -68,7 +76,7 @@ body {
   height: 49px;
   background-image: url(../assets/img/carrito-de-compras.png);
   font-size: 17px;
-  font-stretch:extra-expanded;
+  font-stretch: extra-expanded;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 45px;
@@ -76,8 +84,6 @@ body {
   line-height: 45px;
   color: rgba(135, 0, 0, 0.995);
 }
-
-
 
 .titulos {
   font-size: 35px;
@@ -90,38 +96,33 @@ body {
   margin: auto;
 }
 
-
-
 .catalogo {
   padding: 5px;
   margin: 5px;
- }
+}
 
- .catalogo h2{
+.catalogo h2 {
   font-size: 1.1em;
   align-items: center;
   text-align: center;
   padding: 10px;
+}
 
- }
-
- .catalogo p {
-  padding:6px;
+.catalogo p {
+  padding: 6px;
   margin-top: 5px;
- }
+}
 
- .catalogo button{
+.catalogo button {
   margin: 15px;
- }
+}
 
- .carimg {
+.carimg {
   max-width: 250px;
   max-height: 170px;
   border: 2px solid black;
   border-radius: 7px;
-  
 }
-
 
 .cardCatalogo {
   display: flex;
@@ -130,22 +131,20 @@ body {
   justify-content: center;
 }
 
-
-
 .cardIndividual {
   max-width: 380px;
   padding: 2px;
 }
 
-.carrito h1, .carrito h2{
+.carrito h1,
+.carrito h2 {
   font-size: 35px;
   text-align: center;
   color: rgb(60, 60, 60);
   padding: 15px;
- 
 }
 
-.carrito-productos{
+.carrito-productos {
   max-width: 100%;
   border: 3px solid rgba(0, 0, 0, 0.255);
   border-radius: 15px;
@@ -161,24 +160,31 @@ body {
   width: 100rem;
   padding: 5px;
   margin: 5px;
-    
 }
 
-.carrito-total{
-  text-align:right;
-  margin-right: calc(10% - 20px)!important;
+.carrito-total {
+  text-align: right;
+  margin-right: calc(10% - 20px) !important;
   font-weight: bold;
 }
-.carrito-button{
-top:0;
-
+.carrito-button {
+  margin: auto;
 }
-.carrito-card  {
+.carrito-card {
   margin: 20px;
 }
+.carrito-card ul{
+  list-style:decimal-leading-zero ;
+  margin-left: 15px;
+  
+}
 
+.carrito div p{
+  margin: 15px;
+}
 
 .formulario-cart {
+  background-color:white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,13 +193,12 @@ top:0;
   border: 3px solid rgba(0, 0, 0, 0.255);
   border-radius: 15px;
   padding: 15px;
-  
 }
 
 .formulario-cart p {
   margin: 10px;
 }
 
-.formulario-button{
+.formulario-button {
   align-self: center;
 }

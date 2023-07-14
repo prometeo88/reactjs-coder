@@ -17,7 +17,7 @@ function App() {
     <ChakraProvider>
       <ShoppingCartContextProvider>
         <BrowserRouter>
-        <Box >
+        <Box className="background" >
           <NavBar />
           <Routes>
             <Route exact path="/" element={<Welcome />} />

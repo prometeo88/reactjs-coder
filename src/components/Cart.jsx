@@ -1,6 +1,15 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../context/shoppingCartContext";
-import { Button, Card, FormControl, FormLabel, Input, VStack , Flex } from "@chakra-ui/react";
+import {
+  Button,
+  Card,
+  FormControl,
+  FormLabel,
+  Input,
+  VStack,
+  Flex,
+  FormHelperText,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
@@ -69,7 +78,9 @@ const Cart = () => {
         <div>
           <p>No hay elementos en el carrito</p>
           <Link to="/">
-            <Button>Ir a la Página Principal</Button>
+            <Button colorScheme="green" className="carrito-card">
+              Ir a la Página Principal
+            </Button>
           </Link>
         </div>
       ) : (
@@ -79,35 +90,44 @@ const Cart = () => {
               {cart.map((item) => (
                 <li key={item.id}>
                   <Flex>
-                  <p>{item.producto}</p>
-                  <p>Cantidad: {item.quantity}</p>
-                  <p>Precio: USD {item.precio.toLocaleString()}</p>
-                  <p>
-                    Subtotal: USD{" "}
-                    {calculateSubtotal(item.quantity, item.precio)}
-                  </p>
-                  <Button className="carrito-button" colorScheme="red" w="full" onClick={() => eliminarItem(item.id)}>
-                    Eliminar
-                  </Button>
+                    <p>{item.producto}</p>
+                    <p>Cantidad: {item.quantity}</p>
+                    <p>Precio: USD {item.precio.toLocaleString()}</p>
+                    <p>
+                      Subtotal: USD{" "}
+                      {calculateSubtotal(item.quantity, item.precio)}
+                    </p>
+                    <Button
+                      className="carrito-button"
+                      colorScheme="red"
+                      w="full"
+                      onClick={() => eliminarItem(item.id)}
+                    >
+                      Eliminar
+                    </Button>
                   </Flex>
                 </li>
               ))}
             </ul>
           </Card>
-          <p className="carrito-total" >Total General: USD {calculateTotal()}</p>
-          <Button colorScheme="blue" onClick={vaciarCarrito}>Vaciar Carrito</Button>
+          <p className="carrito-total">Total General: USD {calculateTotal()}</p>
+          <Button colorScheme="red" onClick={vaciarCarrito}>
+            Vaciar Carrito
+          </Button>
         </div>
       )}
-      <h2 >Formulario de Compra</h2>
+      <h2>Formulario de Compra</h2>
       {cart.length === 0 ? (
         <div>
-          <p>Agregar elementos al carrito para finalizar su Compra</p>
+          <p style={{ textAlign: "center" }}>
+            Agregar elementos al carrito para finalizar su Compra
+          </p>
         </div>
       ) : (
         <div className="formulario-cart">
           <form onSubmit={handleSubmit}>
             <VStack spacing={4} alignItems="flex-start">
-              <FormControl>
+              <FormControl isRequired>
                 <FormLabel>Nombre:</FormLabel>
                 <Input
                   type="text"
@@ -115,7 +135,7 @@ const Cart = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl isRequired>
                 <FormLabel>Teléfono:</FormLabel>
                 <Input
                   type="text"
@@ -123,7 +143,7 @@ const Cart = () => {
                   onChange={(e) => setTelefono(e.target.value)}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl isRequired>
                 <FormLabel>Email:</FormLabel>
                 <Input
                   type="email"
@@ -131,7 +151,7 @@ const Cart = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl isRequired colorScheme="green">
                 <FormLabel>Confirmar Email:</FormLabel>
                 <Input
                   type="email"
@@ -139,14 +159,26 @@ const Cart = () => {
                   onChange={(e) => setConfirmarEmail(e.target.value)}
                 />
               </FormControl>
-              <Button className="formulario-button" type="submit" colorScheme="green">Confirmar Compra</Button>
+              <Button 
+                className="formulario-button"
+                type="submit"
+                colorScheme="green"
+              >
+                Confirmar Compra
+              </Button>
             </VStack>
           </form>
           <p>Con su numero de Orden, su compra a finalizado.</p>
           <p>Nro de orden: {orderID}</p>
           <div>
             <Link to={"/"}>
-              <Button className="formulario-button" colorScheme="green" onClick={vaciarCarrito}>Finalizar y Volver</Button>
+              <Button
+                className="formulario-button"
+                colorScheme="green"
+                onClick={vaciarCarrito}
+              >
+                Finalizar y Volver
+              </Button>
             </Link>
           </div>
         </div>
